@@ -1,0 +1,14 @@
+[monitor:///var/log/auth.log]
+disabled = false
+index = linux
+sourcetype = linux_secure
+
+[monitor:///var/log/syslog]
+disabled = false
+index = linux
+sourcetype = linux_syslog
+
+[monitor:///var/log/kern.log]
+disabled = false
+index = linux
+sourcetype = linux_kern
