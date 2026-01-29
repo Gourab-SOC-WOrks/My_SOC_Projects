@@ -1,0 +1,69 @@
+# Lab Overview
+
+## Lab Objective
+
+This lab simulates a real SOC environment where a Windows endpoint is monitored using Splunk. The goal is to collect, validate, and analyze Windows Security, Sysmon, and Application logs to detect suspicious activity, troubleshoot ingestion issues, and document findings in a SOC-ready manner.
+
+---
+
+## Scenario
+
+A Windows endpoint generates authentication events, endpoint activity, and application logs. These logs must be centrally collected and analyzed by a SOC analyst to identify potential security incidents such as brute-force login attempts, suspicious process execution, and abnormal network connections.
+
+---
+
+## Components Used
+
+* **Windows Endpoint** – Log source system
+* **Splunk Universal Forwarder** – Log collection agent
+* **Splunk Enterprise** – SIEM platform for indexing and analysis
+* **Sysmon** – Enhanced endpoint telemetry
+
+---
+
+## Log Sources Ingested
+
+* Windows Security Event Logs
+* Sysmon Operational Logs
+* Windows Application Logs
+
+Each log source is routed to a dedicated index for clear separation and efficient analysis.
+
+---
+
+## High-Level Data Flow
+
+Windows Endpoint → Splunk Universal Forwarder → TCP 9997 → Splunk Enterprise → Detection & Investigation
+
+---
+
+## Detections Demonstrated
+
+* Failed login and brute-force attempts (Event ID 4625)
+* Suspicious process creation (Sysmon Event ID 1)
+* Network connection monitoring (Sysmon Event ID 3)
+* Application error monitoring
+
+---
+
+## Validation Approach
+
+* Audit policy verification using `auditpol`
+* Input validation using `btool`
+* Index-based search validation in Splunk
+* Screenshot and SPL-based proof collection
+
+---
+
+## Key Learning Outcomes
+
+* Windows audit and logging fundamentals
+* Splunk log onboarding and index management
+* Endpoint behavior analysis using Sysmon
+* SOC-style troubleshooting and documentation
+
+---
+
+## Lab Outcome
+
+Upon completion, this lab demonstrates the ability to onboard Windows logs into a SIEM, resolve common ingestion and permission issues, and build meaningful SOC detections supported by technical evidence.

@@ -1,0 +1,26 @@
+# -------------------------------
+# Windows Security Logs
+# -------------------------------
+[WinEventLog://Security]
+disabled = 0
+index = wineventlog
+sourcetype = WinEventLog:Security
+start_from = oldest
+
+# -------------------------------
+# Windows Application Logs
+# -------------------------------
+[WinEventLog://Application]
+disabled = 0
+index = application
+sourcetype = WinEventLog:Application
+start_from = oldest
+
+# -------------------------------
+# Sysmon Logs
+# -------------------------------
+[WinEventLog://Microsoft-Windows-Sysmon/Operational]
+disabled = 0
+index = sysmon
+sourcetype = xmlwineventlog:sysmon
+start_from = oldest

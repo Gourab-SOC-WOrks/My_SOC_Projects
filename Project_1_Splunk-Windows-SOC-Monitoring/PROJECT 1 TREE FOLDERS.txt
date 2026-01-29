@@ -1,0 +1,58 @@
+PROJECT 1 TREE FOLDERS 
+
+SOC-Projects/
+└── Splunk-Windows-SOC-Monitoring/
+    ├── 01-Architecture/
+    │   ├── soc_topology.drawio
+    │   ├── soc_topology.png
+    │   └── soc_data_flow.png
+    │
+    ├── 02-Environment/
+    │   ├── lab_overview.txt
+    │   └── host_details.png
+    │
+    ├── 03-Splunk-Server/
+    │   ├── receiving_port_9997.png
+    │   ├── indexes_created.png
+    │   └── splunk_server_status.png
+    │
+    ├── 04-Forwarder/
+    │   ├── forwarder_install.png
+    │   ├── forwarder_connected.png
+    │   ├── service_account_system.png
+    │   └── btool_inputs_debug.png
+    │
+    ├── 05-Configuration/
+    │   ├── inputs.conf
+    │   ├── sysmon_install.png
+    │   └── auditpol_enabled.png
+    │
+    ├── 06-Log-Ingestion/
+    │   ├── security_logs_index.png
+    │   ├── failed_logins_4625.png
+    │   ├── sysmon_eventcode_1.png
+    │   ├── sysmon_eventcode_3.png
+    │   └── application_logs.png
+    │
+    ├── 07-Detections/
+    │   ├── failed_login_detection.spl
+    │   ├── brute_force_threshold.png
+    │   ├── suspicious_process_detection.spl
+    │   └── network_connection_detection.spl
+    │
+    ├── 08-Troubleshooting/
+    │   ├── no_logs_issue.png
+    │   ├── cli_command_error.png
+    │   ├── windows_home_limitations.png
+    │   └── resolution_notes.txt
+    │
+    ├── 09-Report/
+    │   ├── Full_SOC_Project_Report.pdf
+    │   └── Full_SOC_Project_Report.docx
+    │
+    ├── 10-Interview-Proof/
+    │   ├── Project_Proof_2Page.pdf
+    │   ├── key_screenshots.png
+    │   └── interview_talking_points.txt
+    │
+    └── README.md

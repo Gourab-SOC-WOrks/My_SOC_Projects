@@ -1,0 +1,343 @@
+PROJECT 1 PROOF 
+
+
+📸 STAGE-WISE SCREENSHOT CHECKLIST (SOC PROJECT)
+🧱 STAGE 1: ENVIRONMENT & ARCHITECTURE
+
+📂 Folder: 01-Architecture/
+
+1️⃣ Architecture Diagram
+
+draw.io diagram showing:
+
+Windows Endpoint
+
+Splunk Universal Forwarder
+
+TCP 9997
+
+Splunk Enterprise
+
+File:
+
+soc_topology.png
+
+
+2️⃣ Data Flow Diagram (Optional but good)
+
+Arrow flow of logs
+
+File:
+
+soc_data_flow.png
+
+🧱 STAGE 2: SPLUNK ENTERPRISE (SOC SERVER)
+
+📂 Folder: 03-Splunk-Server/
+
+3️⃣ Splunk Login Page (Optional)
+
+Shows Splunk Enterprise is running
+
+File:
+
+splunk_login.png
+
+
+4️⃣ Receiving Port Enabled
+
+GUI → Forwarding & Receiving → Receiving
+
+Show TCP 9997 enabled
+
+File:
+
+receiving_port_9997.png
+
+
+5️⃣ Indexes Created
+
+Show:
+
+wineventlog
+
+sysmon
+
+application
+
+File:
+
+indexes_created.png
+
+🧱 STAGE 3: FORWARDER INSTALL & STATUS
+
+📂 Folder: 04-Forwarder/
+
+6️⃣ Forwarder Installation Complete
+
+Installer success screen
+
+File:
+
+forwarder_install.png
+
+
+7️⃣ Forwarder Connected
+
+Splunk GUI → Forwarder Management
+
+Status: Active
+
+File:
+
+forwarder_connected.png
+
+
+8️⃣ Forwarder Service Account
+
+services.msc → SplunkForwarder → Log On tab
+
+Show Local System
+
+File:
+
+service_account_system.png
+
+🧱 STAGE 4: WINDOWS AUDITING
+
+📂 Folder: 05-Configuration/
+
+9️⃣ Audit Policy Enabled
+
+CMD:
+
+auditpol /get /category:"Logon/Logoff"
+
+
+File:
+
+auditpol_enabled.png
+
+
+10️⃣ Test Failed Login (Optional)
+
+Login failure screen
+
+File:
+
+failed_login_test.png
+
+🧱 STAGE 5: SPLUNK CONFIGURATION FILES
+
+📂 Folder: 05-Configuration/
+
+11️⃣ inputs.conf – Security Logs
+
+Show:
+
+[WinEventLog://Security]
+
+
+File:
+
+inputs_security.png
+
+
+12️⃣ inputs.conf – Application Logs
+
+File:
+
+inputs_application.png
+
+
+13️⃣ inputs.conf – Sysmon Logs
+
+File:
+
+inputs_sysmon.png
+
+🧱 STAGE 6: SYSMON INSTALLATION
+
+📂 Folder: 05-Configuration/
+
+14️⃣ Sysmon Installed Successfully
+
+CMD output or Event Viewer
+
+File:
+
+sysmon_installed.png
+
+
+15️⃣ Sysmon Operational Log Visible
+
+Event Viewer → Sysmon
+
+File:
+
+sysmon_eventviewer.png
+
+🧱 STAGE 7: INPUT VERIFICATION
+
+📂 Folder: 04-Forwarder/
+
+16️⃣ btool Verification
+
+CMD:
+
+splunk btool inputs list --debug
+
+
+File:
+
+btool_inputs_debug.png
+
+🧱 STAGE 8: LOG INGESTION PROOF (MOST IMPORTANT)
+
+📂 Folder: 06-Log-Ingestion/
+
+17️⃣ Security Logs Visible
+
+SPL:
+
+index=wineventlog
+
+
+File:
+
+security_logs_index.png
+
+
+18️⃣ Failed Logins (4625)
+
+SPL:
+
+index=wineventlog EventCode=4625
+
+
+File:
+
+failed_logins_4625.png
+
+
+19️⃣ Application Logs
+
+SPL:
+
+index=application
+
+
+File:
+
+application_logs.png
+
+
+20️⃣ Sysmon Logs
+
+SPL:
+
+index=sysmon
+
+
+File:
+
+sysmon_logs.png
+
+
+21️⃣ Sysmon Process Creation
+
+SPL:
+
+index=sysmon EventCode=1
+
+
+File:
+
+sysmon_eventcode_1.png
+
+
+22️⃣ Sysmon Network Connections
+
+SPL:
+
+index=sysmon EventCode=3
+
+
+File:
+
+sysmon_eventcode_3.png
+
+🧱 STAGE 9: DETECTIONS
+
+📂 Folder: 07-Detections/
+
+23️⃣ Failed Login Detection
+
+SPL with stats/threshold
+
+File:
+
+failed_login_detection.png
+
+
+24️⃣ Suspicious Process Detection
+
+File:
+
+suspicious_process_detection.png
+
+
+25️⃣ Application Error Detection
+
+File:
+
+application_error_detection.png
+
+🧱 STAGE 10: TROUBLESHOOTING (INTERVIEW GOLD)
+
+📂 Folder: 08-Troubleshooting/
+
+26️⃣ No Logs Issue
+
+Empty search result
+
+File:
+
+no_logs_issue.png
+
+
+27️⃣ CLI Error Screenshot
+
+Wrong command error
+
+File:
+
+cli_command_error.png
+
+
+28️⃣ Windows Home Limitation
+
+secpol missing / explanation
+
+File:
+
+windows_home_limitation.png
+
+🧱 STAGE 11: FINAL DELIVERABLES
+
+📂 Folder: 09-Report/
+
+29️⃣ Final Report PDF
+
+File:
+
+Full_SOC_Project_Report.pdf
+
+
+📂 Folder: 10-Interview-Proof/
+
+30️⃣ 2-Page Proof PDF
+
+File:
+
+Project_Proof_2Page.pdf
