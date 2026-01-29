@@ -1,0 +1,15 @@
+##### Purpose: HOW you detected it
+
+
+
+###### Contains:
+
+
+
+* Exact Wireshark display filters
+* DNS filters
+* HTTP filters
+* Beaconing investigation filters
+* Suspicious IP filters
+* Port-based filters
+* Correlation filters
