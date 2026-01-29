@@ -1,0 +1,74 @@
+# Extracted URL Analysis
+
+## URL Identified from Email Body
+
+```
+hxxp://micros0ft-tech-support[.]example/verify
+```
+
+> Note: The URL has been defanged to prevent accidental clicks.
+
+---
+
+## URL Extraction Method
+
+* URL was manually extracted from the email body section of the `.eml` file.
+* Identified during **content inspection** of the call-to-action link prompting account verification.
+
+---
+
+## URL Breakdown
+
+| Component | Value                          | Observation                           |
+| --------- | ------------------------------ | ------------------------------------- |
+| Protocol  | HTTP                           | Not secure (no HTTPS)                 |
+| Domain    | micros0ft-tech-support.example | Lookalike domain (typosquatting)      |
+| Path      | /verify                        | Common credential-harvesting endpoint |
+
+---
+
+## Indicators of Malicious Intent
+
+### 1. Typosquatting
+
+* The domain uses **"micros0ft"** with a zero instead of an "o".
+* Designed to visually impersonate a trusted Microsoft domain.
+
+### 2. Brand Impersonation
+
+* Uses the term **"tech-support"** to appear legitimate.
+* No affiliation with official Microsoft domains.
+
+### 3. Credential Harvesting Pattern
+
+* The `/verify` path strongly suggests a fake login or verification page.
+
+### 4. Mismatch with Legitimate Practices
+
+* Microsoft does not send direct verification links for account recovery via third-party domains.
+
+---
+
+## Threat Assessment
+
+* Domain is not owned or operated by Microsoft.
+* URL structure matches common phishing and credential harvesting campaigns.
+
+**Risk Level:** 🔴 High
+
+---
+
+## SOC Analyst Notes
+
+* URL should be blocked at:
+
+  * Email gateway
+  * Web proxy
+  * DNS filtering controls
+* Users who interacted with the link should be treated as potentially compromised.
+
+---
+
+## Conclusion
+
+The extracted URL demonstrates multiple high-confidence phishing indicators, including typosquatting, brand impersonation, and credential-harvesting behavior. This URL directly supports classification of the email as a phishing attack.

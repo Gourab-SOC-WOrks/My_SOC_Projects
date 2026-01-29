@@ -1,0 +1,9 @@
+Original Message
+Message ID	<SEYPR01MB6988FA917828F0682DF1AED1989EA@SEYPR01MB6988.apcprd01.prod.exchangelabs.com>
+Created at:	Thu, Jan 29, 2026 at 9:58 AM (Delivered after 6 seconds)
+From:	ERLICK BACHMAN <micr0soft_supp0rt@outlook.com>
+To:	"manushichillar412@gmail.com" <manushichillar412@gmail.com>
+Subject:	URGENT: Microsoft Account Will Be Disabled in 2 Hours
+SPF:	PASS with IP 2a01:111:f403:d405:0:0:0:2 Learn more
+DKIM:	'PASS' with domain outlook.com Learn more
+DMARC:	'PASS' Learn more

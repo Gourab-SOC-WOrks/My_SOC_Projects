@@ -1,0 +1,9 @@
+## Header Analysis Result
+
+The email originated from a legitimate mail server as indicated by the Received headers, with no evidence of spoofed IP addresses or abnormal relay behavior.
+
+The sender address and return-path domain were consistent, suggesting no envelope spoofing. Authentication checks for SPF, DKIM, and DMARC all passed, confirming that the email was sent from an authorized source and the message integrity was preserved during transit.
+
+The Message-ID domain aligned with the sender domain, and timestamp analysis showed a normal and expected email delivery path.
+
+Although the email passed all authentication mechanisms, header analysis alone does not determine malicious intent. Further content and URL analysis identified the email as phishing.

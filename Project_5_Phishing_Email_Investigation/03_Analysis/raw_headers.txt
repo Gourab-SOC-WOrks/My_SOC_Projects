@@ -1,0 +1,56 @@
+Delivered-To: manushichillar412@gmail.com
+Received: by 2002:a05:6f02:8495:b0:114:f6da:b69a with SMTP id y21csp417112rce;
+        Wed, 28 Jan 2026 19:56:21 -0800 (PST)
+X-Received: by 2002:a05:690e:1515:b0:63f:c019:23b2 with SMTP id 956f58d0204a3-6499f0b79b4mr1430138d50.28.1769658980902;
+        Wed, 28 Jan 2026 19:56:20 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1769658980; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=DMG9mfbieAEoNKbc2OuogBa7QS29P8k5lZ1FoAqpfnnp5m3CiZJxm6vqsUWrW+VVgB
+         Xrz9/TJv04sLck4m6eazlbZrGJ7GIXEQYUd3BeLKvsE2gXo+mik8Pt79pgu3DqgJ/FWb
+         E4L4pJBpctb7mvURZKYCU2O2bXnnXFkSVa0XI03h/QwJIU+vQu4GfFJJlQWrrVBhgEZ4
+         m2ei8mfMrvzfu6DlVMqAGDv715Jca/fASQwt7rVZWpor1SZR5ELxE3P8+bO3hKJA0p09
+         v9XY2RtIpZA5nRb3e2UdNNt0HERykxmRtsAxteKZAHzXwDauZvTfPdV8JxPhm0Ddj9JO
+         OXag==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:msip_labels:content-language:accept-language
+         :message-id:date:thread-index:thread-topic:subject:to:from
+         :dkim-signature;
+        bh=VCw3AWj3XKUOQPFLC2QMaHEPlWurUYJdWLd2J+t6xpI=;
+        fh=Sf0JkcG0BEsT43L3g9pB4nRFMKg00HkAqo7fVUiweg4=;
+        b=d6euZJSdyjZnremN9K6YbVXRI14NPbrGbs6rsMXwljXH+AZvFT+ckL6mLstfbHlgJO
+         HqqPDdFBhcxmGWz2byAQV2ziaJU7Hqfu4jpCDAmwAc+c2xlMNxecUM9RZJfl/IpOt3VQ
+         Nvq3ZpjsArnP6wvmpomqrNKJ5rTUvMegEfstDy/k/jgtTKchluu267EFQSnRYVFtiM44
+         h4p84eBHhXWusCJGUDC58flBqGmrBjVvfUhpRqKlb2Op+76mwuDtNflN4QAVdPxkNGyA
+         9Rlf3mb+gpUpZGb7rRUIpgYYfhlCVxIlT2qpIvHPtYJJIkw9COBvX6OrxAvCpIOUAW7p
+         zung==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@outlook.com header.s=selector1 header.b=s+Bn+bAF;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of micr0soft_supp0rt@outlook.com designates 2a01:111:f403:d405::3 as permitted sender) smtp.mailfrom=micr0soft_supp0rt@outlook.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com
+Return-Path: <micr0soft_supp0rt@outlook.com>
+Received: from TYDPR03CU002.outbound.protection.outlook.com (mail-japaneastazolkn190130003.outbound.protection.outlook.com. [2a01:111:f403:d405::3])
+        by mx.google.com with ESMTPS id 956f58d0204a3-6499611016bsi2898462d50.168.2026.01.28.19.56.20
+        for <manushichillar412@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 28 Jan 2026 19:56:20 -0800 (PST)
+Received-SPF: pass (google.com: domain of micr0soft_supp0rt@outlook.com designates 2a01:111:f403:d405::3 as permitted sender) client-ip=2a01:111:f403:d405::3;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@outlook.com header.s=selector1 header.b=s+Bn+bAF;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of micr0soft_supp0rt@outlook.com designates 2a01:111:f403:d405::3 as permitted sender) smtp.mailfrom=micr0soft_supp0rt@outlook.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=RZhGfj5pE8V8J5DQN/Lou6vVcZR6xVDzTK1czyN5DAo5gBI/A19+5z7d0pScQHwL15JC+SVDZ14Cf0OWbdcgCHUZr8SBNIY0XC+2BrmvkvxfBtz4W+7kdZ1x6bwwSdWKgOCYl1TUJP38oiH0Z33U5SagIOc4D2VsMClrqJhXSTvMzfzIw2az8Dtjkygepv9hT3mZ0nXO4cytajd8YMoMpHoiduxepBfWWl5Nz9dzczlf5pEgDhxjapP6gjs2JvPnxpO241v/v9i2vK6/2z/UkjECBSNoX+1TByMOfbpPGIa1+5DQXDMQUwNwV/YWjhChq5kEgHd5rbXuU+trwP5TEA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=VCw3AWj3XKUOQPFLC2QMaHEPlWurUYJdWLd2J+t6xpI=;
+ b=RfY6+eA6xNHDmEe96w0nbwBeTwLHWK/EdzK1aqarqlOwdqnQkUCg623qw/g8RN29eG6aaO9DAZ8gdFh2ctuLhpf/7xHudMaB4FgwzA7F1s/Z94BdmB5w7cBjbQ5NhCx5OV3wLnw/YE8bAu7esRE4hEB/5mNQbb8y7TvjhqtwFlHb84XPWMS5IsfRz7LyOul+m5c1xEhCx/urcw7IeAO7KqgVs5hS8UpTBrtsIpN/4rSTx5VkB/anDufbAYKBXStypm03HREe04ogXd8TG8XzoO3NcX9syj0ki/Lanql7zJJ54sewLMjfq9I4zJJS20CoN69jvEH5emzFNuWgDIABwg==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=outlook.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=VCw3AWj3XKUOQPFLC2QMaHEPlWurUYJdWLd2J+t6xpI=;
